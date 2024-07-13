@@ -29,15 +29,15 @@ def send_email(recipient):
     logging.info(f"Sender: {sender}, Password: {'*' * len(password) if password else 'Not set'}")
 
     msg = MIMEText("This is a test email sent from a Messaging System.")
-    msg['Subject'] = "Test Email"
+    msg['Subject'] = "Test my first messaging system that is built using Python and "
     msg['From'] = sender
     msg['To'] = recipient
 
     try:
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            logging.info("Connected to SMTP server {emoji.emojize(':hourglass_flowing_sand:')} ...")
+            logging.info(f"Connected to SMTP server {emoji.emojize(':pizza:')} ")
             smtp.login(sender, password)
-            logging.info("Logged in Successfully {emoji.emojize(':white_check_mark:')}")
+            logging.info(f"Logged in Successfully {emoji.emojize(':thumbs_up:')} ")
             smtp.send_message(msg)
             logging.info(f"Email sent to {recipient}")
         logging.info(f"Email sent {emoji.emojize(':envelope_with_arrow:')} to {recipient}")
