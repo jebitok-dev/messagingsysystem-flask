@@ -23,7 +23,7 @@ $ brew install rabbitmq
 
 ``````
 $ brew services start rabbitmq
-
+$ brew services restart rabbitmq
 ``````
 Checkout http://localhost:15672/
 Login to RabbitMQ Management Interface using the following credentials:
@@ -54,4 +54,20 @@ $ ls ~/messaging_system.log
 $ nano ~/messaging_system.log
 ````
 
+## NGINX 
+- 
+
+## NGROK 
+- Create account on [NGROK website](https://dashboard.ngrok.com/get-started/setup/)
+```````
+$ brew install ngrok/ngrok/ngrok
+$ ngrok config add-authtoken <replace_your_authtoken_here>
+// deploy your app online 
+$ ngrok http http://localhost:8080
+// https://9906-102-215-34-198.ngrok-free.app -> http://localhost:8080 
+``````
+
+
+https://9906-102-215-34-198.ngrok-free.app/?sendmail=test@example.com
+https://9906-102-215-34-198.ngrok-free.app/?talktome
 
